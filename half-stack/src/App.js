@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/Header.js';
+import Content from './components/Content.js';
 
 const App = () => {
   const course = 'Half stack application development';
@@ -13,15 +14,7 @@ const App = () => {
   return (
     <div>
       <Header course={course}/>
-      <p>
-        {part1} : {exercises1}
-      </p>
-      <p>
-        {part2} : {exercises2}
-      </p>
-      <p>
-        {part3} : {exercises3}
-      </p>
+      <Content part1={part1} part2={part2} part3={part3} exercises1={exercises1} exercises2={exercises2} exercises3={exercises3}/>
       <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
     </div>
   );
