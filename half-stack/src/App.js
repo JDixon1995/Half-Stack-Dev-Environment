@@ -3,9 +3,8 @@ import Header from './components/Header.js';
 import Content from './components/Content.js';
 import Total from './components/Total.js';
 import Hello from './components/Hello.js';
-import Counter from './components/Counter.js';
 
-const App = () => {
+const App = (htmlcounter) => {
   const course = 'Half stack application development';
   const part1 = 'Fundamentals of React';
   const exercises1 = 10;
@@ -19,11 +18,12 @@ const App = () => {
     age: 26
   }
 
+  const {counter} = htmlcounter;
 
   return (
     <div>
       <Hello object={object} />
-      <Counter />
+      <div>{counter}</div>
       <Header course={course}/>
       <Content part1={part1} part2={part2} part3={part3} exercises1={exercises1} exercises2={exercises2} exercises3={exercises3}/>
       <Total exercises1={exercises1} exercises2={exercises2} exercises3={exercises3} /> 
