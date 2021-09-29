@@ -1,7 +1,7 @@
-const Hello = ({props}) => {
+const Hello = ({object}) => {
 
-    const name = props.name;
-    const age = props.age;
+    const name = object.name;
+    const age = object.age;
 
     const bornYear = () => {
         const yearNow = new Date().getFullYear();

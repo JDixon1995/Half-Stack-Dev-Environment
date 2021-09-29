@@ -3,6 +3,7 @@ import Header from './components/Header.js';
 import Content from './components/Content.js';
 import Total from './components/Total.js';
 import Hello from './components/Hello.js';
+import Counter from './components/Counter.js';
 
 const App = () => {
   const course = 'Half stack application development';
@@ -13,7 +14,7 @@ const App = () => {
   const part3 = 'State of a component';
   const exercises3 = 14;
 
-  const props = {
+  const object = {
     name: "John",
     age: 26
   }
@@ -21,7 +22,8 @@ const App = () => {
 
   return (
     <div>
-      <Hello props={props} />
+      <Hello object={object} />
+      <Counter />
       <Header course={course}/>
       <Content part1={part1} part2={part2} part3={part3} exercises1={exercises1} exercises2={exercises2} exercises3={exercises3}/>
       <Total exercises1={exercises1} exercises2={exercises2} exercises3={exercises3} /> 
