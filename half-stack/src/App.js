@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header.js';
 import Content from './components/Content.js';
 import Total from './components/Total.js';
 import Hello from './components/Hello.js';
 
-const App = (htmlcounter) => {
+const App = () => {
+
+  const [ counter, setCounter ] = useState(0);
+
   const course = 'Half stack application development';
   const part1 = 'Fundamentals of React';
   const exercises1 = 10;
@@ -18,7 +21,10 @@ const App = (htmlcounter) => {
     age: 26
   }
 
-  const {counter} = htmlcounter;
+  setTimeout(
+    () => setCounter( counter + 1 ),
+    1000
+  )
 
   return (
     <div>
